@@ -24,3 +24,5 @@ else if (show_banner3) {
 // back button + pull button
 draw_sprite(s_back, 0, exit_x, exit_y);
 draw_sprite(s_pull, 0, pull_x, pull_y);
+
+

@@ -25,6 +25,7 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"Font1","order":1,"path":"fonts/Font1/Font1.yy",},
     {"name":"o_back","order":1,"path":"objects/o_back/o_back.yy",},
     {"name":"o_button","order":2,"path":"objects/o_button/o_button.yy",},
     {"name":"o_coin","order":3,"path":"objects/o_coin/o_coin.yy",},
