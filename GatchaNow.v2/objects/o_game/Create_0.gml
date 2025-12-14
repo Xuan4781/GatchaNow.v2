@@ -1,4 +1,5 @@
 display_set_gui_size(746, 287);
+
 if !variable_global_exists("coins") {
     global.coins = 0;
 }
