@@ -1,6 +1,10 @@
 var max_coins = 5;
 var buffer = 16; 
 
+if (global.current_form == 3) {
+    max_coins = 10;
+}
+
 if (instance_number(o_coin) < max_coins) {
     var attempts = 0;
     var placed = false;

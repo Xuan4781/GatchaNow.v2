@@ -3,6 +3,18 @@ var moving = false;
 var hsp = 0;
 var vsp = 0;
 
+switch(global.current_form) {
+    case 1: 
+        move += 1;
+        break;
+    case 2:
+        break;
+    case 3: 
+        break;
+    default:
+        break;
+}
+
 if (room == gacha) exit;
 if (keyboard_check(vk_left))  hsp -= move;
 if (keyboard_check(vk_right)) hsp += move;
@@ -69,7 +81,6 @@ if (keyboard_check_pressed(ord("1")) && global.unlocked_forms.banner1) {
     apply_player_form();
 }
 
-
 if (keyboard_check_pressed(ord("2")) && global.unlocked_forms.banner2) {
     global.current_form = 2;
     apply_player_form();
@@ -80,6 +91,6 @@ if (keyboard_check_pressed(ord("3")) && global.unlocked_forms.banner3) {
     apply_player_form();
 }
 if (keyboard_check_pressed(ord("4"))) {
-    global.current_form = 4;
+    global.current_form = 0;
     apply_player_form();
 }

@@ -64,7 +64,7 @@ function do_gacha_pull() {
     } 
     else if (show_banner3) {
         pull_table = [
-            { spr: s_farmer, anim_spr: s_farmer_anim, weight: 5 },
+            { spr: s_farmer, anim_spr: s_farmer_anim, weight: 90 },
             { spr: s_nocrops, anim_spr: s_cropanim, weight: 45 },
             { spr: s_taxes, anim_spr: s_cropanim_1, weight: 50 }
         ];

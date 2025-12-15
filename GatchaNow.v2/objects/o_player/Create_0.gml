@@ -11,6 +11,7 @@ if (!variable_global_exists("current_form")) {
 }
 
 
+
 function apply_player_form() {
     switch (global.current_form) {
         case 1:
@@ -22,10 +23,8 @@ function apply_player_form() {
         case 3:
             sprite_index = s_farmer1;
             break;
-		case 4:
-			sprite_index = s_playerleftidle;
         default:
-            sprite_index = s_playerleftidle;
+			break;
     }
 }
 
