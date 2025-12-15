@@ -32,11 +32,29 @@ exit_h = sprite_get_height(s_back);
 
 pull_w = sprite_get_width(s_pull);
 pull_h = sprite_get_height(s_pull);
+
 if (!variable_global_exists("current_banner")) {
     global.current_banner = 1;
 }
 
+// Restore last active banner after a pull
+if (variable_global_exists("last_active_banner")) {
+    global.current_banner = global.last_active_banner;
+
+    show_banner1 = (global.current_banner == 1);
+    show_banner2 = (global.current_banner == 2);
+    show_banner3 = (global.current_banner == 3);
+} else {
+    // Default if no previous pull
+    global.current_banner = 1;
+    show_banner1 = true;
+    show_banner2 = false;
+    show_banner3 = false;
+}
+
+
 function do_gacha_pull() {
+	global.last_active_banner = global.current_banner;
     if (global.coins < 1) {
         show_message("Not enough coins!");
         return;

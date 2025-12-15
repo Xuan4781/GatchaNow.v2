@@ -10,7 +10,7 @@ if (in_safe) {
     var nx = x + lengthdir_x(random_speed, move_dir);
     var ny = y + lengthdir_y(random_speed, move_dir);
 
-    if (place_meeting(nx, ny, o_wall) 
+    if (instance_position(nx, ny, o_walkable) == noone 
         || (safe_inst != noone && point_distance(nx, ny, safe_inst.x, safe_inst.y) < avoid_dist)) {
         move_dir = irandom(360);
     } else {
@@ -21,8 +21,9 @@ if (in_safe) {
 } else {
     var dir = point_direction(x, y, o_player.x, o_player.y);
     dir += irandom_range(-20, 20);
+	
     var other_enemy = instance_nearest(x, y, o_enemy);
-    if (other != noone && other.id != id) {
+    if (other_enemy != noone && other_enemy.id != id) {
         var dist = point_distance(x, y, other_enemy.x, other_enemy.y);
         if (dist < 48) {
             var away = point_direction(other_enemy.x, other_enemy.y, x, y);
@@ -35,7 +36,7 @@ if (in_safe) {
 
     var tries = 0;
     var max_tries = 20;
-    while ((place_meeting(nx, ny, o_wall) 
+    while ((instance_position(nx, ny, o_walkable) == noone  
         || (safe_inst != noone && point_distance(nx, ny, safe_inst.x, safe_inst.y) < avoid_dist)) 
         && tries < max_tries) 
     {
@@ -45,7 +46,7 @@ if (in_safe) {
         tries++;
     }
 
-    if (!place_meeting(nx, ny, o_wall) 
+    if (instance_position(nx, ny, o_walkable) != noone  
         && (safe_inst == noone || point_distance(nx, ny, safe_inst.x, safe_inst.y) >= avoid_dist)) {
         x = nx;
         y = ny;
