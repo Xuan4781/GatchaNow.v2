@@ -38,6 +38,7 @@
     {"name":"o_safe","order":7,"path":"objects/o_safe/o_safe.yy",},
     {"name":"o_walkable","order":9,"path":"objects/o_walkable/o_walkable.yy",},
     {"name":"gacha","order":1,"path":"rooms/gacha/gacha.yy",},
+    {"name":"so_rarewin","order":1,"path":"sounds/so_rarewin/so_rarewin.yy",},
     {"name":"s_b1","order":1,"path":"sprites/s_b1/s_b1.yy",},
     {"name":"s_b3","order":2,"path":"sprites/s_b3/s_b3.yy",},
     {"name":"s_back","order":3,"path":"sprites/s_back/s_back.yy",},

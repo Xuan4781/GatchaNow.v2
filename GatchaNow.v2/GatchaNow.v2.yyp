@@ -71,6 +71,7 @@
     {"id":{"name":"rm_pull_result","path":"rooms/rm_pull_result/rm_pull_result.yy",},},
     {"id":{"name":"so_coin","path":"sounds/so_coin/so_coin.yy",},},
     {"id":{"name":"so_pull","path":"sounds/so_pull/so_pull.yy",},},
+    {"id":{"name":"so_rarewin","path":"sounds/so_rarewin/so_rarewin.yy",},},
     {"id":{"name":"s_b1","path":"sprites/s_b1/s_b1.yy",},},
     {"id":{"name":"s_b2","path":"sprites/s_b2/s_b2.yy",},},
     {"id":{"name":"s_b3","path":"sprites/s_b3/s_b3.yy",},},

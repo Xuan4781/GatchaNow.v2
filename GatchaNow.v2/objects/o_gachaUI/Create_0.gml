@@ -120,6 +120,13 @@ function do_gacha_pull() {
 	    global.unlocked_forms.banner3 = true;
 	    pulled_is_rare = true;
 	}
+	
+	if (pulled_is_rare) {
+		audio_play_sound(so_rarewin, 1, false);  
+	} else {
+		audio_play_sound(so_pull, 1, false);     
+	}
+
 
     global.last_pull_sprite_static = chosen_static;
     global.last_pull_sprite_anim   = chosen_entry.anim_spr;
