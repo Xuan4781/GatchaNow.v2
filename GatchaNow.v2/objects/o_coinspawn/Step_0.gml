@@ -20,7 +20,9 @@ if (instance_number(o_coin) < max_coins) {
         var right = cx + 32 + buffer;
         var bottom = cy + 32 + buffer;
 
-        if (collision_rectangle(left, top, right, bottom, o_wall, false, true) == noone) {
+        if (instance_position(cx, cy, o_walkable) != noone &&
+            collision_rectangle(left, top, right, bottom, o_wall, false, true) == noone) 
+        {
             instance_create_layer(cx, cy, "Instances", o_coin);
             placed = true;
         }
