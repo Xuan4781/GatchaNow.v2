@@ -43,6 +43,7 @@ if (mouse_check_button_pressed(mb_left)) {
         show_banner1 = true;
         show_banner2 = false;
         show_banner3 = false;
+		global.current_banner = 1;
     }
     
     // b2
@@ -52,6 +53,7 @@ if (mouse_check_button_pressed(mb_left)) {
         show_banner1 = false;
         show_banner2 = true;
         show_banner3 = false;
+		global.current_banner = 2;
     }
     
     // b3
@@ -61,6 +63,7 @@ if (mouse_check_button_pressed(mb_left)) {
         show_banner1 = false;
         show_banner2 = false;
         show_banner3 = true;
+		global.current_banner = 3;
     }
 }
 

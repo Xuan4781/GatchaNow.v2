@@ -1,6 +1,6 @@
 {
   "$GMSprite":"v2",
-  "%Name":"s_syringeanim",
+  "%Name":"s_cerfanim_1",
   "bboxMode":0,
   "bbox_bottom":286,
   "bbox_left":0,
@@ -25,7 +25,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"fd13cd0d-18a7-42d8-85ab-c7f6edc70ea4","blendMode":0,"displayName":"default","isLocked":false,"name":"fd13cd0d-18a7-42d8-85ab-c7f6edc70ea4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"s_syringeanim",
+  "name":"s_cerfanim_1",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -37,7 +37,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"s_syringeanim",
+    "%Name":"s_cerfanim_1",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -61,7 +61,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"s_syringeanim",
+    "name":"s_cerfanim_1",
     "playback":1,
     "playbackSpeed":20.0,
     "playbackSpeedType":0,
@@ -75,19 +75,19 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ed7a56ff-1e61-404c-867d-716f025514b0","path":"sprites/s_syringeanim/s_syringeanim.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ed7a56ff-1e61-404c-867d-716f025514b0","path":"sprites/s_cerfanim_1/s_cerfanim_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"cced8aed-d1c7-423a-9322-8783f0ff55c3","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"46cb3b97-cbfe-448c-afd7-dbb992185788","path":"sprites/s_syringeanim/s_syringeanim.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"46cb3b97-cbfe-448c-afd7-dbb992185788","path":"sprites/s_cerfanim_1/s_cerfanim_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"a8d025ca-987e-4876-8e4c-78a78c042b65","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fd39df32-b656-4d7a-a742-f98d8ef99fd9","path":"sprites/s_syringeanim/s_syringeanim.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fd39df32-b656-4d7a-a742-f98d8ef99fd9","path":"sprites/s_cerfanim_1/s_cerfanim_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"a8caab51-4d6b-4f86-8e38-e31d26010a90","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d0be7506-d49f-49a3-b869-5783b6691f4e","path":"sprites/s_syringeanim/s_syringeanim.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d0be7506-d49f-49a3-b869-5783b6691f4e","path":"sprites/s_cerfanim_1/s_cerfanim_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"ced3f7ab-680b-4788-9234-d7104e6eea86","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"97fd87b7-938b-4091-b4d4-39c853de5da5","path":"sprites/s_syringeanim/s_syringeanim.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"97fd87b7-938b-4091-b4d4-39c853de5da5","path":"sprites/s_cerfanim_1/s_cerfanim_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"7b95cf25-3653-4fde-ba0c-86f6212d6a2c","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

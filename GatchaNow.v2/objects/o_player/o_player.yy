@@ -31,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"s_playerrightrun",
-    "path":"sprites/s_playerrightrun/s_playerrightrun.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

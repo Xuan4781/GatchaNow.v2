@@ -32,6 +32,10 @@ exit_h = sprite_get_height(s_back);
 
 pull_w = sprite_get_width(s_pull);
 pull_h = sprite_get_height(s_pull);
+if (!variable_global_exists("current_banner")) {
+    global.current_banner = 1;
+}
+
 function do_gacha_pull() {
     if (global.coins < 1) {
         show_message("Not enough coins!");
@@ -40,12 +44,11 @@ function do_gacha_pull() {
 
     global.coins -= 1;
 
-    // Select pull table based on active banner
     var pull_table;
 
     if (show_banner1) {
         pull_table = [
-            { spr: s_rare, anim_spr: s_rare_anim, weight: 5 },
+            { spr: s_rare, anim_spr: s_rare_anim, weight: 80 },
             { spr: s_c1,   anim_spr: s_c1_anim,   weight: 47 },
             { spr: s_c4,   anim_spr: s_c4_anim,   weight: 71 },
             { spr: s_c5,   anim_spr: s_c5_anim,   weight: 30 },
@@ -54,16 +57,16 @@ function do_gacha_pull() {
     } 
     else if (show_banner2) {
         pull_table = [
-            { spr: s_docter, anim_spr: s_doctor_anim, weight: 5 },
-            { spr: s_cerf,   anim_spr: s_cerfanim,   weight: 50 },
-            { spr: s_syringe, anim_spr: s_syringeanim, weight: 45 }
+            { spr: s_docter, anim_spr: s_doctor_anim, weight: 80 },
+            { spr: s_cerf,   anim_spr: s_doctor_anim_1,   weight: 50 },
+            { spr: s_syringe, anim_spr: s_cerfanim_1, weight: 45 }
         ];
     } 
     else if (show_banner3) {
         pull_table = [
             { spr: s_farmer, anim_spr: s_farmer_anim, weight: 5 },
             { spr: s_nocrops, anim_spr: s_cropanim, weight: 45 },
-            { spr: s_taxes, anim_spr: s_taxanim, weight: 50 }
+            { spr: s_taxes, anim_spr: s_cropanim_1, weight: 50 }
         ];
     }
 
@@ -85,6 +88,21 @@ function do_gacha_pull() {
     }
 
     var chosen_static = chosen_entry.spr;
+	var pulled_is_rare = false;
+
+	if (global.current_banner == 1 && chosen_static == s_rare) {
+	    global.unlocked_forms.banner1 = true;
+	    pulled_is_rare = true;
+	}
+	else if (global.current_banner == 2 && chosen_static == s_docter) {
+	    global.unlocked_forms.banner2 = true;
+	    pulled_is_rare = true;
+	}
+	else if (global.current_banner == 3 && chosen_static == s_farmer) {
+	    global.unlocked_forms.banner3 = true;
+	    pulled_is_rare = true;
+	}
+
     global.last_pull_sprite_static = chosen_static;
     global.last_pull_sprite_anim   = chosen_entry.anim_spr;
 
