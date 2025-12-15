@@ -32,7 +32,6 @@ exit_h = sprite_get_height(s_back);
 
 pull_w = sprite_get_width(s_pull);
 pull_h = sprite_get_height(s_pull);
-
 function do_gacha_pull() {
     if (global.coins < 1) {
         show_message("Not enough coins!");
@@ -41,13 +40,32 @@ function do_gacha_pull() {
 
     global.coins -= 1;
 
-    var pull_table = [
-        { spr: s_rare, anim_spr: s_rare_anim, weight: 5 },
-        { spr: s_c1,   anim_spr: s_c1_anim,   weight: 47 },
-        { spr: s_c4,   anim_spr: s_c4_anim,   weight: 71 },
-        { spr: s_c5,   anim_spr: s_c5_anim,   weight: 30 },
-        { spr: s_c6,   anim_spr: s_c6_anim,   weight: 90 }
-    ];
+    // Select pull table based on active banner
+    var pull_table;
+
+    if (show_banner1) {
+        pull_table = [
+            { spr: s_rare, anim_spr: s_rare_anim, weight: 5 },
+            { spr: s_c1,   anim_spr: s_c1_anim,   weight: 47 },
+            { spr: s_c4,   anim_spr: s_c4_anim,   weight: 71 },
+            { spr: s_c5,   anim_spr: s_c5_anim,   weight: 30 },
+            { spr: s_c6,   anim_spr: s_c6_anim,   weight: 90 }
+        ];
+    } 
+    else if (show_banner2) {
+        pull_table = [
+            { spr: s_docter, anim_spr: s_doctor_anim, weight: 5 },
+            { spr: s_cerf,   anim_spr: s_cerfanim,   weight: 50 },
+            { spr: s_syringe, anim_spr: s_syringeanim, weight: 45 }
+        ];
+    } 
+    else if (show_banner3) {
+        pull_table = [
+            { spr: s_farmer, anim_spr: s_farmer_anim, weight: 5 },
+            { spr: s_nocrops, anim_spr: s_cropanim, weight: 45 },
+            { spr: s_taxes, anim_spr: s_taxanim, weight: 50 }
+        ];
+    }
 
     // Weighted roll
     var total_weight = 0;
@@ -97,3 +115,4 @@ function do_gacha_pull() {
 
     room_goto(rm_pull_result);
 }
+
