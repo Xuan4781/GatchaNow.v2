@@ -68,8 +68,7 @@ if (place_meeting(x, y, o_player)) {
 
 
 
-
-// --- Dialogue update ---
+// dialogue
 dialogue_timer++;
 if (dialogue_timer >= dialogue_interval) {
     dialogue_timer = 0;

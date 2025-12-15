@@ -2,17 +2,24 @@ var num_enemies = 1;
 
 // Only spawn if o_safeSpot exists
 if (instance_exists(o_safeSpot)) {
-    while (instance_number(o_enemy) < num_enemies) {
+	var walkables = [];
+	with (o_walkable) {
+        array_push(walkables, id);
+    }
+
+    while (instance_number(o_enemy) < num_enemies && array_length(walkables) > 0) {
         var tries = 0;
         var placed = false;
 
-        while (!placed && tries < 100) {
-            var ex = irandom(room_width - 100);
-            var ey = irandom(room_height - 100);
-            tries += 1;
+        while (!placed && tries < 50) {
 
-            if (!position_meeting(ex, ey, o_wall) && !position_meeting(ex, ey, o_safeSpot)) {
-                instance_create_layer(ex, ey, "Instances", o_enemy);
+            tries += 1;
+			
+			var idx = irandom(array_length(walkables) -1);
+			var walk_inst = walkables[idx];
+
+            if (!position_meeting(walk_inst.x,walk_inst.y, o_enemy)){
+                instance_create_layer(walk_inst.x,walk_inst.y, "Instances", o_enemy);
                 placed = true;
             }
         }
